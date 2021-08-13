@@ -1,0 +1,848 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_FET:IR2104 U1
+U 1 1 611658A7
+P 1850 2150
+F 0 "U1" H 2150 1700 50  0000 C CNN
+F 1 "IR2104" H 2150 1600 50  0000 C CNN
+F 2 "" H 1850 2150 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2104.pdf?fileId=5546d462533600a4015355c7c1c31671" H 1850 2150 50  0001 C CNN
+	1    1850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR01
+U 1 1 6116A7CE
+P 1850 1350
+F 0 "#PWR01" H 1850 1200 50  0001 C CNN
+F 1 "VDD" H 1865 1523 50  0000 C CNN
+F 2 "" H 1850 1350 50  0001 C CNN
+F 3 "" H 1850 1350 50  0001 C CNN
+	1    1850 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1450 1850 1650
+Wire Wire Line
+	1850 1350 1850 1450
+Connection ~ 1850 1450
+$Comp
+L Device:C_Small C?
+U 1 1 61166C45
+P 1300 1550
+F 0 "C?" H 1392 1596 50  0000 L CNN
+F 1 "C_Small" H 1392 1505 50  0000 L CNN
+F 2 "" H 1300 1550 50  0001 C CNN
+F 3 "~" H 1300 1550 50  0001 C CNN
+	1    1300 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1450 1300 1350
+Wire Wire Line
+	1300 1650 1300 1750
+$Comp
+L power:GND #PWR?
+U 1 1 61168B7D
+P 1300 1750
+F 0 "#PWR?" H 1300 1500 50  0001 C CNN
+F 1 "GND" H 1305 1577 50  0000 C CNN
+F 2 "" H 1300 1750 50  0001 C CNN
+F 3 "" H 1300 1750 50  0001 C CNN
+	1    1300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61169BFC
+P 1850 2750
+F 0 "#PWR?" H 1850 2500 50  0001 C CNN
+F 1 "GND" H 1855 2577 50  0000 C CNN
+F 2 "" H 1850 2750 50  0001 C CNN
+F 3 "" H 1850 2750 50  0001 C CNN
+	1    1850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2750 1850 2650
+$Comp
+L power:VDD #PWR?
+U 1 1 6116C44D
+P 1300 1350
+F 0 "#PWR?" H 1300 1200 50  0001 C CNN
+F 1 "VDD" H 1315 1523 50  0000 C CNN
+F 2 "" H 1300 1350 50  0001 C CNN
+F 3 "" H 1300 1350 50  0001 C CNN
+	1    1300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1950 2250 1950
+Wire Wire Line
+	2150 2450 2250 2450
+Wire Wire Line
+	2550 2350 2150 2350
+Wire Wire Line
+	2550 1450 1850 1450
+Wire Wire Line
+	2150 1850 2550 1850
+Wire Wire Line
+	2550 2200 2550 2350
+Wire Wire Line
+	2550 1850 2550 2000
+$Comp
+L Device:C_Small C1
+U 1 1 6116B64D
+P 2550 2100
+F 0 "C1" H 2642 2146 50  0000 L CNN
+F 1 "C_Small" H 2642 2055 50  0000 L CNN
+F 2 "" H 2550 2100 50  0001 C CNN
+F 3 "~" H 2550 2100 50  0001 C CNN
+	1    2550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_Small D1
+U 1 1 611708A9
+P 2550 1650
+F 0 "D1" V 2596 1580 50  0000 R CNN
+F 1 "D_Schottky_Small" V 2450 1950 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 2550 1650 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 2550 1650 50  0001 C CNN
+F 4 "583-FM2500W " V 2550 1650 50  0001 C CNN "MFN"
+	1    2550 1650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2250 2450 2    50   Input ~ 0
+LS_A
+Text GLabel 2250 1950 2    50   Input ~ 0
+HS_A
+Wire Wire Line
+	1550 2150 1450 2150
+Wire Wire Line
+	1550 2250 1450 2250
+Text HLabel 1450 2150 0    50   Input ~ 0
+PWM1
+Text HLabel 1450 2250 0    50   Input ~ 0
+PWM1_EN
+Wire Wire Line
+	2550 2350 2650 2350
+Connection ~ 2550 2350
+Text HLabel 2650 2350 2    50   Output ~ 0
+LOAD1
+Wire Wire Line
+	2550 1750 2550 1850
+Connection ~ 2550 1850
+Wire Wire Line
+	2550 1550 2550 1450
+Text Notes 1050 1100 0    39   ~ 8
+PWM1_Driver
+Wire Notes Line
+	1000 1000 3000 1000
+Wire Notes Line
+	3000 1000 3000 3000
+Wire Notes Line
+	3000 3000 1000 3000
+Wire Notes Line
+	1000 3000 1000 1000
+Wire Notes Line
+	1000 3100 5100 3100
+Text Notes 1050 3200 0    39   ~ 8
+HBridge
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 611D4CF7
+P 4650 1650
+F 0 "D?" V 4696 1580 50  0000 R CNN
+F 1 "FM2500" V 4600 1600 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 4650 1650 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 4650 1650 50  0001 C CNN
+F 4 "583-FM2500W " V 4650 1650 50  0001 C CNN "MFN"
+	1    4650 1650
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	3100 3000 3100 1000
+Wire Notes Line
+	5100 3000 3100 3000
+Wire Notes Line
+	5100 1000 5100 3000
+Wire Notes Line
+	3100 1000 5100 1000
+Text Notes 3150 1100 0    39   ~ 8
+PWM1_Driver
+Wire Wire Line
+	4650 1550 4650 1450
+Connection ~ 4650 1850
+Wire Wire Line
+	4650 1750 4650 1850
+Text HLabel 4750 2350 2    50   Output ~ 0
+LOAD2
+Connection ~ 4650 2350
+Wire Wire Line
+	4650 2350 4750 2350
+Text HLabel 3550 2250 0    50   Input ~ 0
+PWM2_EN
+Text HLabel 3550 2150 0    50   Input ~ 0
+PWM2
+Wire Wire Line
+	3650 2250 3550 2250
+Wire Wire Line
+	3650 2150 3550 2150
+Text GLabel 4350 1950 2    50   Input ~ 0
+HS_B
+Text GLabel 4350 2450 2    50   Input ~ 0
+LS_B
+$Comp
+L Device:C_Small C?
+U 1 1 611C65B5
+P 4650 2100
+F 0 "C?" H 4742 2146 50  0000 L CNN
+F 1 "C_Small" H 4742 2055 50  0000 L CNN
+F 2 "" H 4650 2100 50  0001 C CNN
+F 3 "~" H 4650 2100 50  0001 C CNN
+	1    4650 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1850 4650 2000
+Wire Wire Line
+	4650 2200 4650 2350
+Wire Wire Line
+	4250 1850 4650 1850
+Wire Wire Line
+	4650 1450 3950 1450
+Wire Wire Line
+	4650 2350 4250 2350
+Wire Wire Line
+	4250 2450 4350 2450
+Wire Wire Line
+	4250 1950 4350 1950
+$Comp
+L power:VDD #PWR?
+U 1 1 611C65A8
+P 3400 1350
+F 0 "#PWR?" H 3400 1200 50  0001 C CNN
+F 1 "VDD" H 3415 1523 50  0000 C CNN
+F 2 "" H 3400 1350 50  0001 C CNN
+F 3 "" H 3400 1350 50  0001 C CNN
+	1    3400 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2750 3950 2650
+$Comp
+L power:GND #PWR?
+U 1 1 611C65A1
+P 3950 2750
+F 0 "#PWR?" H 3950 2500 50  0001 C CNN
+F 1 "GND" H 3955 2577 50  0000 C CNN
+F 2 "" H 3950 2750 50  0001 C CNN
+F 3 "" H 3950 2750 50  0001 C CNN
+	1    3950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 611C659B
+P 3400 1750
+F 0 "#PWR?" H 3400 1500 50  0001 C CNN
+F 1 "GND" H 3405 1577 50  0000 C CNN
+F 2 "" H 3400 1750 50  0001 C CNN
+F 3 "" H 3400 1750 50  0001 C CNN
+	1    3400 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1650 3400 1750
+Wire Wire Line
+	3400 1450 3400 1350
+$Comp
+L Device:C_Small C?
+U 1 1 611C6593
+P 3400 1550
+F 0 "C?" H 3492 1596 50  0000 L CNN
+F 1 "C_Small" H 3492 1505 50  0000 L CNN
+F 2 "" H 3400 1550 50  0001 C CNN
+F 3 "~" H 3400 1550 50  0001 C CNN
+	1    3400 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 1450
+Wire Wire Line
+	3950 1350 3950 1450
+Wire Wire Line
+	3950 1450 3950 1650
+$Comp
+L power:VDD #PWR?
+U 1 1 611C658A
+P 3950 1350
+F 0 "#PWR?" H 3950 1200 50  0001 C CNN
+F 1 "VDD" H 3965 1523 50  0000 C CNN
+F 2 "" H 3950 1350 50  0001 C CNN
+F 3 "" H 3950 1350 50  0001 C CNN
+	1    3950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_FET:IR2104 U?
+U 1 1 611C6584
+P 3950 2150
+F 0 "U?" H 4250 1700 50  0000 C CNN
+F 1 "IR2104" H 4250 1600 50  0000 C CNN
+F 2 "" H 3950 2150 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2104.pdf?fileId=5546d462533600a4015355c7c1c31671" H 3950 2150 50  0001 C CNN
+	1    3950 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 2700 5150
+Connection ~ 2700 4050
+Text GLabel 1300 4850 0    50   Input ~ 0
+LS_A
+Text GLabel 1300 4350 0    50   Input ~ 0
+HS_A
+Wire Wire Line
+	1400 4850 1400 4750
+Connection ~ 1400 4850
+Wire Wire Line
+	1400 4850 1300 4850
+Wire Wire Line
+	1400 4350 1400 4250
+Connection ~ 1400 4350
+Wire Wire Line
+	1400 4350 1300 4350
+Connection ~ 1800 4350
+Wire Wire Line
+	1800 4450 1700 4450
+Wire Wire Line
+	1800 4350 1800 4450
+Wire Wire Line
+	1800 4250 1800 4350
+Wire Wire Line
+	1700 4250 1800 4250
+Wire Wire Line
+	1400 4250 1500 4250
+Wire Wire Line
+	1400 4450 1400 4350
+Wire Wire Line
+	1500 4450 1400 4450
+Wire Wire Line
+	1400 4750 1500 4750
+Wire Wire Line
+	1400 4950 1400 4850
+Wire Wire Line
+	1500 4950 1400 4950
+Connection ~ 1800 4850
+Wire Wire Line
+	1800 4950 1700 4950
+Wire Wire Line
+	1800 4850 1800 4950
+Wire Wire Line
+	1800 4750 1800 4850
+Wire Wire Line
+	1700 4750 1800 4750
+$Comp
+L Device:R_Small R?
+U 1 1 611DCEFE
+P 1600 4950
+F 0 "R?" V 1700 4950 50  0000 C CNN
+F 1 "R_Small" V 1500 4950 50  0000 C CNN
+F 2 "" H 1600 4950 50  0001 C CNN
+F 3 "~" H 1600 4950 50  0001 C CNN
+	1    1600 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 611DB107
+P 1600 4450
+F 0 "R?" V 1700 4450 50  0000 C CNN
+F 1 "R_Small" V 1550 4450 50  0000 C CNN
+F 2 "" H 1600 4450 50  0001 C CNN
+F 3 "~" H 1600 4450 50  0001 C CNN
+	1    1600 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 611D95DD
+P 1600 4750
+F 0 "D?" H 1600 4957 50  0000 C CNN
+F 1 "D_Small" H 1600 4866 50  0000 C CNN
+F 2 "" V 1600 4750 50  0001 C CNN
+F 3 "~" V 1600 4750 50  0001 C CNN
+	1    1600 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 611D86E5
+P 1600 4250
+F 0 "D?" H 1600 4457 50  0000 C CNN
+F 1 "D_Small" H 1600 4366 50  0000 C CNN
+F 2 "" V 1600 4250 50  0001 C CNN
+F 3 "~" V 1600 4250 50  0001 C CNN
+	1    1600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4850 1800 4850
+Wire Wire Line
+	1900 4350 1800 4350
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 611C7075
+P 2100 4350
+F 0 "Q?" H 2300 4400 50  0000 L CNN
+F 1 "BSS127" H 2300 4300 50  0000 L CNN
+F 2 "" H 2300 4450 50  0001 C CNN
+F 3 "~" H 2100 4350 50  0001 C CNN
+	1    2100 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4050 2700 4250
+Wire Wire Line
+	2200 4050 2700 4050
+Wire Wire Line
+	2200 4150 2200 4050
+Wire Wire Line
+	2200 5150 2200 5050
+Wire Wire Line
+	2700 5150 2200 5150
+Wire Wire Line
+	2700 4950 2700 5150
+Connection ~ 2700 4600
+Wire Wire Line
+	2700 4600 2700 4750
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 611D181D
+P 2700 4850
+F 0 "D?" V 2746 4780 50  0000 R CNN
+F 1 "FM2500" V 2650 4800 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 2700 4850 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 2700 4850 50  0001 C CNN
+F 4 "583-FM2500W " V 2700 4850 50  0001 C CNN "MFN"
+	1    2700 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 4600 2700 4450
+Wire Wire Line
+	2200 4600 2700 4600
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 611CEAB8
+P 2700 4350
+F 0 "D?" V 2746 4280 50  0000 R CNN
+F 1 "FM2500" V 2650 4300 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 2700 4350 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 2700 4350 50  0001 C CNN
+F 4 "583-FM2500W " V 2700 4350 50  0001 C CNN "MFN"
+	1    2700 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 4600 2200 4650
+Connection ~ 2200 4600
+Wire Wire Line
+	2200 4550 2200 4600
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 611CB34D
+P 2100 4850
+F 0 "Q?" H 2304 4896 50  0000 L CNN
+F 1 "BSS127" H 2304 4805 50  0000 L CNN
+F 2 "" H 2300 4950 50  0001 C CNN
+F 3 "~" H 2100 4850 50  0001 C CNN
+	1    2100 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4050 3000 4050
+Wire Wire Line
+	2700 5150 3000 5150
+$Comp
+L power:GND #PWR?
+U 1 1 61213ED5
+P 3000 5250
+F 0 "#PWR?" H 3000 5000 50  0001 C CNN
+F 1 "GND" H 3005 5077 50  0000 C CNN
+F 2 "" H 3000 5250 50  0001 C CNN
+F 3 "" H 3000 5250 50  0001 C CNN
+	1    3000 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5150 3000 5250
+$Comp
+L power:VCC #PWR?
+U 1 1 61218FF6
+P 3000 3950
+F 0 "#PWR?" H 3000 3800 50  0001 C CNN
+F 1 "VCC" H 3015 4123 50  0000 C CNN
+F 2 "" H 3000 3950 50  0001 C CNN
+F 3 "" H 3000 3950 50  0001 C CNN
+	1    3000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3950 3000 4050
+Connection ~ 3000 5150
+Connection ~ 3000 4050
+Wire Wire Line
+	3000 5150 3300 5150
+Connection ~ 3300 5150
+Wire Wire Line
+	3000 4050 3300 4050
+Connection ~ 3300 4050
+Wire Wire Line
+	4600 4850 4600 4750
+Connection ~ 4600 4850
+Wire Wire Line
+	4600 4850 4700 4850
+Wire Wire Line
+	4600 4350 4600 4250
+Connection ~ 4600 4350
+Wire Wire Line
+	4600 4350 4700 4350
+Connection ~ 4200 4350
+Wire Wire Line
+	4200 4450 4300 4450
+Wire Wire Line
+	4200 4350 4200 4450
+Wire Wire Line
+	4200 4250 4200 4350
+Wire Wire Line
+	4300 4250 4200 4250
+Wire Wire Line
+	4600 4250 4500 4250
+Wire Wire Line
+	4600 4450 4600 4350
+Wire Wire Line
+	4500 4450 4600 4450
+Wire Wire Line
+	4600 4750 4500 4750
+Wire Wire Line
+	4600 4950 4600 4850
+Wire Wire Line
+	4500 4950 4600 4950
+Connection ~ 4200 4850
+Wire Wire Line
+	4200 4950 4300 4950
+Wire Wire Line
+	4200 4850 4200 4950
+Wire Wire Line
+	4200 4750 4200 4850
+Wire Wire Line
+	4300 4750 4200 4750
+$Comp
+L Device:R_Small R?
+U 1 1 6120880E
+P 4400 4950
+F 0 "R?" V 4500 4950 50  0000 C CNN
+F 1 "R_Small" V 4300 4950 50  0000 C CNN
+F 2 "" H 4400 4950 50  0001 C CNN
+F 3 "~" H 4400 4950 50  0001 C CNN
+	1    4400 4950
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 61208808
+P 4400 4450
+F 0 "R?" V 4500 4450 50  0000 C CNN
+F 1 "R_Small" V 4350 4450 50  0000 C CNN
+F 2 "" H 4400 4450 50  0001 C CNN
+F 3 "~" H 4400 4450 50  0001 C CNN
+	1    4400 4450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 61208802
+P 4400 4750
+F 0 "D?" H 4400 4957 50  0000 C CNN
+F 1 "D_Small" H 4400 4866 50  0000 C CNN
+F 2 "" V 4400 4750 50  0001 C CNN
+F 3 "~" V 4400 4750 50  0001 C CNN
+	1    4400 4750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 612087FC
+P 4400 4250
+F 0 "D?" H 4400 4457 50  0000 C CNN
+F 1 "D_Small" H 4400 4366 50  0000 C CNN
+F 2 "" V 4400 4250 50  0001 C CNN
+F 3 "~" V 4400 4250 50  0001 C CNN
+	1    4400 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4850 4200 4850
+Wire Wire Line
+	4100 4350 4200 4350
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 612087F4
+P 3900 4350
+F 0 "Q?" H 4100 4400 50  0000 L CNN
+F 1 "BSS127" H 4100 4300 50  0000 L CNN
+F 2 "" H 4100 4450 50  0001 C CNN
+F 3 "~" H 3900 4350 50  0001 C CNN
+	1    3900 4350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4050 3300 4250
+Wire Wire Line
+	3800 4050 3300 4050
+Wire Wire Line
+	3800 4150 3800 4050
+Wire Wire Line
+	3800 5150 3800 5050
+Wire Wire Line
+	3300 5150 3800 5150
+Wire Wire Line
+	3300 4950 3300 5150
+Connection ~ 3300 4600
+Wire Wire Line
+	3300 4600 3300 4750
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 612087E6
+P 3300 4850
+F 0 "D?" V 3250 4800 50  0000 R CNN
+F 1 "FM2500" V 3150 4800 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 3300 4850 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 3300 4850 50  0001 C CNN
+F 4 "583-FM2500W " V 3300 4850 50  0001 C CNN "MFN"
+	1    3300 4850
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3300 4600 3300 4450
+Wire Wire Line
+	3800 4600 3300 4600
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 612087DD
+P 3300 4350
+F 0 "D?" V 3250 4300 50  0000 R CNN
+F 1 "FM2500" V 3150 4350 50  0000 R CNN
+F 2 "HV_HBridge:FM2500" V 3300 4350 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/345/fm2500w-28810.pdf" V 3300 4350 50  0001 C CNN
+F 4 "583-FM2500W " V 3300 4350 50  0001 C CNN "MFN"
+	1    3300 4350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3800 4600 3800 4650
+Connection ~ 3800 4600
+Wire Wire Line
+	3800 4550 3800 4600
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 612087D3
+P 3900 4850
+F 0 "Q?" H 4104 4896 50  0000 L CNN
+F 1 "BSS127" H 4104 4805 50  0000 L CNN
+F 2 "" H 4100 4950 50  0001 C CNN
+F 3 "~" H 3900 4850 50  0001 C CNN
+	1    3900 4850
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	900  800  5200 800 
+Text HLabel 2100 4600 0    50   Output ~ 0
+LOAD1
+Wire Wire Line
+	2100 4600 2200 4600
+Text HLabel 3900 4600 2    50   Output ~ 0
+LOAD2
+Wire Wire Line
+	3800 4600 3900 4600
+Text GLabel 4700 4850 2    50   Input ~ 0
+LS_A
+Text GLabel 4700 4350 2    50   Input ~ 0
+HS_A
+Wire Notes Line
+	900  5600 900  800 
+Wire Notes Line
+	5200 5600 900  5600
+Wire Notes Line
+	5200 800  5200 5600
+Wire Notes Line
+	5100 3100 5100 5500
+Wire Notes Line
+	1000 5500 1000 3100
+Wire Notes Line
+	5100 5500 1000 5500
+$Comp
+L Device:C_Small C?
+U 1 1 612DCA46
+P 2600 3550
+F 0 "C?" H 2692 3596 50  0000 L CNN
+F 1 "C_Small" H 2692 3505 50  0000 L CNN
+F 2 "" H 2600 3550 50  0001 C CNN
+F 3 "~" H 2600 3550 50  0001 C CNN
+	1    2600 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3650 2600 3750
+Wire Wire Line
+	2600 3450 2600 3350
+$Comp
+L power:VCC #PWR?
+U 1 1 612E3701
+P 2600 3350
+F 0 "#PWR?" H 2600 3200 50  0001 C CNN
+F 1 "VCC" H 2615 3523 50  0000 C CNN
+F 2 "" H 2600 3350 50  0001 C CNN
+F 3 "" H 2600 3350 50  0001 C CNN
+	1    2600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612E401B
+P 2600 3750
+F 0 "#PWR?" H 2600 3500 50  0001 C CNN
+F 1 "GND" H 2605 3577 50  0000 C CNN
+F 2 "" H 2600 3750 50  0001 C CNN
+F 3 "" H 2600 3750 50  0001 C CNN
+	1    2600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 612EF12A
+P 2250 3550
+F 0 "C?" H 2342 3596 50  0000 L CNN
+F 1 "C_Small" H 2342 3505 50  0000 L CNN
+F 2 "" H 2250 3550 50  0001 C CNN
+F 3 "~" H 2250 3550 50  0001 C CNN
+	1    2250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3650 2250 3750
+Wire Wire Line
+	2250 3450 2250 3350
+$Comp
+L power:VCC #PWR?
+U 1 1 612EF132
+P 2250 3350
+F 0 "#PWR?" H 2250 3200 50  0001 C CNN
+F 1 "VCC" H 2265 3523 50  0000 C CNN
+F 2 "" H 2250 3350 50  0001 C CNN
+F 3 "" H 2250 3350 50  0001 C CNN
+	1    2250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612EF138
+P 2250 3750
+F 0 "#PWR?" H 2250 3500 50  0001 C CNN
+F 1 "GND" H 2255 3577 50  0000 C CNN
+F 2 "" H 2250 3750 50  0001 C CNN
+F 3 "" H 2250 3750 50  0001 C CNN
+	1    2250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 612FE5D0
+P 3750 3550
+F 0 "C?" H 3842 3596 50  0000 L CNN
+F 1 "C_Small" H 3842 3505 50  0000 L CNN
+F 2 "" H 3750 3550 50  0001 C CNN
+F 3 "~" H 3750 3550 50  0001 C CNN
+	1    3750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3650 3750 3750
+Wire Wire Line
+	3750 3450 3750 3350
+$Comp
+L power:VCC #PWR?
+U 1 1 612FE5D8
+P 3750 3350
+F 0 "#PWR?" H 3750 3200 50  0001 C CNN
+F 1 "VCC" H 3765 3523 50  0000 C CNN
+F 2 "" H 3750 3350 50  0001 C CNN
+F 3 "" H 3750 3350 50  0001 C CNN
+	1    3750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612FE5DE
+P 3750 3750
+F 0 "#PWR?" H 3750 3500 50  0001 C CNN
+F 1 "GND" H 3755 3577 50  0000 C CNN
+F 2 "" H 3750 3750 50  0001 C CNN
+F 3 "" H 3750 3750 50  0001 C CNN
+	1    3750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 612FE5E4
+P 3400 3550
+F 0 "C?" H 3492 3596 50  0000 L CNN
+F 1 "C_Small" H 3492 3505 50  0000 L CNN
+F 2 "" H 3400 3550 50  0001 C CNN
+F 3 "~" H 3400 3550 50  0001 C CNN
+	1    3400 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3650 3400 3750
+Wire Wire Line
+	3400 3450 3400 3350
+$Comp
+L power:VCC #PWR?
+U 1 1 612FE5EC
+P 3400 3350
+F 0 "#PWR?" H 3400 3200 50  0001 C CNN
+F 1 "VCC" H 3415 3523 50  0000 C CNN
+F 2 "" H 3400 3350 50  0001 C CNN
+F 3 "" H 3400 3350 50  0001 C CNN
+	1    3400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612FE5F2
+P 3400 3750
+F 0 "#PWR?" H 3400 3500 50  0001 C CNN
+F 1 "GND" H 3405 3577 50  0000 C CNN
+F 2 "" H 3400 3750 50  0001 C CNN
+F 3 "" H 3400 3750 50  0001 C CNN
+	1    3400 3750
+	1    0    0    -1  
+$EndComp
+Text Notes 950  900  0    50   ~ 10
+HBridge1
+$EndSCHEMATC
