@@ -1,0 +1,12 @@
+Reference, Quantity, Value, Footprint, Datasheet, MFN
+C1 C2 ,2,"100n 25V","Capacitor_SMD:C_0603_1608Metric","https://www.mouser.de/datasheet/2/212/KEM_C1005_Y5V_SMD-1101305.pdf","80-C0603C104Z3VAC "
+C3 C4 ,2,"1u 630V","Capacitor_THT:C_Rect_L9.0mm_W9.5mm_P7.50mm_MKT","https://www.mouser.de/datasheet/2/315/ABD0000C255-1131244.pdf","667-ECW-FD2J105QB"
+C5 C6 C7 C8 ,4,"100n 630V","Capacitor_SMD:C_1210_3225Metric","https://www.mouser.de/datasheet/2/212/KEM_C1010_X7R_HV_SMD-1102742.pdf","80-C1210C104KBR "
+D3 D4 D9 D10 ,4,"D","HBREMS_Hbridge:SOD-323","https://www.mouser.de/datasheet/2/1057/BAS70WS-1869683.pdf","241-BAS70WS_R1_00001 "
+D1 D2 D5 D6 D7 D8 ,6,"BAS101","Package_TO_SOT_SMD:SOT-23",""
+J1 J2 J4 J5 J6 J7 ,6,"Conn_01x01_Male","MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad","~"
+J3 ,1,"Conn_01x04","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","~"
+Q1 Q2 Q3 Q4 ,4,"BSS127","Package_TO_SOT_SMD:SOT-23","https://www.mouser.de/datasheet/2/196/Infineon-BSS127-DS-v02_01-EN-1226363.pdf","726-BSS127H6327XTSA2 "
+R1 R2 R3 R4 ,4,"27R  50V","Resistor_SMD:R_0603_1608Metric","https://www.mouser.de/datasheet/2/54/crxxxxx-1858361.pdf","652-CR0603FX-27R0ELF "
+U1 U2 ,2,"IR2104","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","https://www.infineon.com/dgdl/ir2104.pdf?fileId=5546d462533600a4015355c7c1c31671","942-IR2104SPBF "
+U3 ,1,"A03P-12","HBREMS_Hbridge:A03P-12",""

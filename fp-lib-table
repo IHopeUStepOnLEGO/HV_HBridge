@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name HV_HBridge)(type KiCad)(uri ${KIPRJMOD}/HV_HBridge.pretty)(options "")(descr ""))
+  (lib (name HBREMS_Hbridge)(type KiCad)(uri ${KIPRJMOD}/HBREMS_Hbridge.pretty)(options "")(descr ""))
 )
